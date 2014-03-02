@@ -1,76 +1,37 @@
 <!DOCTYPE html>
-<html ng-app="AppD">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Ionic Seed App</title>
 
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="css/application.css " />
-        <link rel="stylesheet" type="text/css" href="css/login.css " />
+    <!-- ionic css -->
+    <link href="css/ionic.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
 
-        <title>AppD</title>
-    </head>
-    <body ng-controller="MainCTRL">
-        <!--Header-->
-<!--        <div class="header-bar">
-            <div class="container">
-                <img id="logo" src="./img/logo.png" ng-click="toggleMenu()">
-                <h4><i><b>{{headerName}}</b></i></h4>
-            </div>
-        </div>-->
-        <ion-nav-bar animation="nav-title-slide-ios7" 
-           type="bar-positive" 
-           back-button-type="button-icon" 
-           back-button-icon="ion-arrow-left-c"></ion-nav-bar>
+  </head>
 
-        <!-- Slide Panel -->
-        <div class="navigation-menu" id="navigation-menu">
+  <body ng-app="starter" animation="slide-left-right-ios7">
 
-            <button ng-click="toggleMenu('/')" class="menu-button btn btn-default">Home</button>
-            <br><br>
-            <button ng-click="toggleMenu('/profile')" class="menu-button btn btn-success">Profile</button>
-            <br><br>
-            Apps
-            <br>
-            <div ng-repeat="appName in applications">
-                <button ng-click="toggleMenu('/details')" class="menu-button btn btn-primary">{{appName.name}}</button>
-                <br><br>
-            </div>
-        </div>
-        <ion-nav-view animation="slide-left-right"></ion-nav-view>
+    <ion-nav-bar type="bar-positive" 
+             animation="nav-title-slide-ios7" 
+             back-button-type="button-icon button-clear" 
+             back-button-icon="ion-ios7-arrow-back"></ion-nav-bar>
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <!--libs-->
-        <script type="text/javascript" src="js/libs/jquery/jquery-2.0.2.js"></script>
-        <script type="text/javascript" src="js/libs/jquery/jquery-ui.js"></script>
-        <script type="text/javascript" src="js/libs/angular/angular-animate.js"></script>
-        <script type="text/javascript" src="js/libs/angular/angular-resource.js"></script>
-        <script type="text/javascript" src="js/libs/angular/angular-ui-router.js"></script>
-        <script type="text/javascript" src="js/libs/angular/angular.js"></script>
-        <script type="text/javascript" src="js/libs/angular/angular-local-storage.min.js"></script>
-        <script type="text/javascript" src="js/libs/ionic/ionic-angular.js"></script>
-        <script type="text/javascript" src="js/libs/ionic/ionic.bundle.js"></script>
-        <script type="text/javascript" src="js/libs/ionic/ionic.js"></script>
-        <script type="text/javascript" src="js/libs/phonegap.js"></script>
+    <ion-nav-view></ion-nav-view>
 
+    <!-- libs -->
+    <script src="js/libs/angular/angular.js"></script>
+    <script src="js/libs/ionic/ionic.bundle.js"></script>
+    <script src="js/libs/phonegap.js"></script>
+    <script src="js/libs/angular/angular-local-storage.min.js"></script>
+    
 
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--<script src="cordova.js"></script>-->
 
-        <script type="text/javascript" src="js/app.js"></script>
-
-        <!--Controllers-->
-        <script type="text/javascript" src="js/controllers/MainController.js"></script>
-        <script type="text/javascript" src="js/controllers/ApplicationController.js"></script>
-        <script type="text/javascript" src="js/controllers/ProfileController.js"></script>
-        <script type="text/javascript" src="js/controllers/LoginController.js"></script>
-        <script type="text/javascript" src="js/controllers/DetailsController.js"></script>
-
-        <!--Services-->
-        <script type="text/javascript" src="js/services/Constants.js"></script>
-        <script type="text/javascript" src="js/services/AppService.js"></script>
-        <script type="text/javascript" src="js/services/Storage.js"></script>
-        <script type="text/javascript" src="js/services/LoginService.js"></script>
-    </body>
+    <!-- your app's script -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers/HomeController.js"></script>
+  </body>
 </html>
